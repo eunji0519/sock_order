@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+
+    <style>
+        /* 기본 템플릿 css */
+
+        #menu1 {
+            border: 1px solid black;
+            height: 55px;
+            clear: both;
+        }
+
+        #menu2 {
+            border: 1px solid black;
+            background-color: rgb(104, 153, 173);
+            height: 40px;
+            clear: both;
+        }
+
+        #container {
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: nowrap;
+            clear: both;
+        }
+
+        #submenu {
+            border: 1px solid black;
+            width: 200px;
+            height: 75vh;
+            float: left;
+            clear: both;
+        }
+
+        .container2 {
+            border: 1px solid black;
+            height: 75vh;
+            float: right;
+            flex-grow: 1;
+        }
+
+        #footer {
+            border: 1px solid black;
+            clear: both;
+            width: 100%;
+            height: 95px;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        #main {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #bluebell {
+            border: 1px solid black;
+            float: left;
+            margin-left: 110px;
+            width: 250px;
+            height: 55px;
+        }
+
+        .brand {
+            border: 1px solid black;
+            float: right;
+            font-size: 18px;
+            padding-left: 50px;
+            padding-bottom: 6px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        #password {
+            border: 1px solid black;
+            float: right;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 15px;
+        }
+
+        #location {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        .nav {
+            border: 1px solid black;
+            width: 186px;
+        }
+
+        .nav-link {
+            /* border: 1px solid black; */
+            padding: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+        }
+
+
+        /* 컨텐츠 css */
+        .container2>.content {
+            /* border: 1px black solid; */
+            width: 80vw;
+            height: 60vh;
+            margin: 72px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="menu1">
+            <img id="bluebell" alt="error" src="css/images/bluebell.PNG">
+            <div id="password">담당자</div>
+            <div class="brand"><span id="location">Admistraion</span><br>김은지</div>
+
+        </div>
+
+        <div id="menu2">
+
+
+        </div>
+        <div id="container">
+            <div id="submenu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="양말품목관리.html">
+                            <span>></span>
+                            양말품목관리
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="로그인.html">
+                            <span>></span>
+                            신청기간관리
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="로그인.html">
+                            <span>></span>
+                            신청매장관리
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container2">
+                <div class="content">
+                    <!-- 제목 -->
+                    <h3>양말품목관리</h3>
+                    <!-- 검색 -->
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                            <select class="form-control">
+                                <option value="" disabled selected>선택하세요</option>
+                                <option>2</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">검색</button>
+                        </div>
+                        <select name="type" id="type" class="form-control" required>
+                            <option value="" disabled selected>선택하기</option>
+                            <c:forEach items="${clist}" var="cdto">
+                                <option value="${cdto.iseq}">${cdto.component}</option>
+                            </c:forEach>
+                        </select>
+                        <select name="kind" id="kind" class="form-control" required>
+                            <option value="" disabled selected>선택하기</option>
+                        </select>
+                    </div>
+
+                    <!-- 메인 컨텐츠 -->
+                </div>
+
+            </div>
+        </div>
+        <div id="footer">
+            ©Bluebell (Asia) Ltd. All Rights Reserved.
+        </div>
+    </div>
+</body>
+<style>
+</style>
+<style>
+    /* css 리셋 */
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+</style>
+
+</html>
