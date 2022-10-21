@@ -17,27 +17,24 @@
         /* 기본 템플릿 css */
 
         #menu1 {
-            border: 1px solid black;
             height: 55px;
             clear: both;
         }
 
         #menu2 {
-            border: 1px solid black;
             background-color: rgb(104, 153, 173);
             height: 40px;
             clear: both;
         }
 
         #container {
-            border: 1px solid black;
             display: flex;
             flex-wrap: nowrap;
             clear: both;
         }
 
         #submenu {
-            border: 1px solid black;
+            background-color: rgb(224, 224, 224);
             width: 200px;
             height: 75vh;
             float: left;
@@ -45,14 +42,12 @@
         }
 
         .container2 {
-            border: 1px solid black;
             height: 75vh;
             float: right;
             flex-grow: 1;
         }
 
         #footer {
-            border: 1px solid black;
             clear: both;
             width: 100%;
             height: 95px;
@@ -61,13 +56,11 @@
         }
 
         #main {
-            border: 1px solid black;
             width: 100vw;
             height: 100vh;
         }
 
         #bluebell {
-            border: 1px solid black;
             float: left;
             margin-left: 110px;
             width: 250px;
@@ -75,7 +68,6 @@
         }
 
         .brand {
-            border: 1px solid black;
             float: right;
             font-size: 18px;
             padding-left: 50px;
@@ -85,7 +77,6 @@
         }
 
         #password {
-            border: 1px solid black;
             float: right;
             padding-top: 20px;
             padding-right: 30px;
@@ -93,7 +84,6 @@
         }
 
         #location {
-            border: 1px solid black;
             padding-left: 20px;
             padding-right: 20px;
             font-style: normal;
@@ -101,12 +91,10 @@
         }
 
         .nav {
-            border: 1px solid black;
             width: 186px;
         }
 
         .nav-link {
-            border: 1px solid black;
             padding: 1rem;
             padding-top: 2rem;
             padding-bottom: 2rem;
@@ -116,7 +104,6 @@
 
         /* 컨텐츠 css */
         .container2>.content {
-            border: 1px black solid;
             width: 80vw;
             height: 60vh;
             margin: 36px;
@@ -131,7 +118,7 @@
 
 </head>
 
-<body>
+<body id="sign">
     <div id="main">
         <div id="menu1">
             <img id="bluebell" alt="error" src="css/images/bluebell.PNG">
@@ -176,12 +163,10 @@
                     <!-- 검색 -->
                     <div class="form-group" id="search">
                         <div class="form-inline">
-                    
                             <select class="form-control">
                                 <option value="" disabled selected>product_name</option>
                                 <option>fjlkasjflkjlaejlfjeajfjalkejrlejljl</option>
                             </select>
-                    
                             <select class="form-control" required>
                                 <option value="" disabled selected>product_size</option>
                             </select>
@@ -189,12 +174,13 @@
                                 <option value="" disabled selected>product_color</option>
                             </select>
                             <button type="submit" class="btn btn-secondary">검색</button>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-warning" id="action">항목추가</button>
-                            <button type="submit" class="btn btn-primary" id="action">저장</button>
-                        </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-warning" id="action">항목추가</button>
+                                <button type="submit" class="btn btn-primary" id="action">저장</button>
+                            </div>
                         </div>
                     </div>
+                    <div style="height:336px; overflow:auto">
                         <table class="table table-hover table-bordered text-center">
                             <thead>
                                 <tr>
@@ -224,74 +210,9 @@
                                     <td>1</td>
                                     <td>0</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>안녕</td>
-                                    <td>505압박스타킹</td>
-                                    <td>5PSSNC</td>
-                                    <td>S</td>
-                                    <td>살색</td>
-                                    <td>22000</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
                             </tbody>
-                            </table>
+                        </table>
+                    </div>
                     <!-- 메인 컨텐츠 -->
                 </div>
 
@@ -388,6 +309,15 @@
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
+        border: 1px black solid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        border: 1px black solid;
     }
 
     /* HTML5 display-role reset for older browsers */
