@@ -1,12 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
     <title>Document</title>
+
+    <style>
+        /* 기본 템플릿 css */
+
+        #menu1 {
+            height: 55px;
+            clear: both;
+        }
+
+        #menu2 {
+            background-color: rgb(104, 153, 173);
+            height: 40px;
+            clear: both;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: nowrap;
+            clear: both;
+        }
+
+        #submenu {
+            background-color: rgb(224, 224, 224);
+            width: 200px;
+            height: 75vh;
+            float: left;
+            clear: both;
+        }
+
+        .container2 {
+            height: 75vh;
+            float: right;
+            flex-grow: 1;
+        }
+
+        #footer {
+            clear: both;
+            width: 100%;
+            height: 95px;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        #main {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #bluebell {
+            float: left;
+            margin-left: 110px;
+            width: 250px;
+            height: 55px;
+        }
+
+        .brand {
+            float: right;
+            font-size: 18px;
+            padding-left: 50px;
+            padding-bottom: 6px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        #password {
+            float: right;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 15px;
+        }
+
+        #location {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        .nav {
+            width: 186px;
+        }
+
+        .nav-link {
+            padding: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+        }
+
+
+        /* 컨텐츠 css */
+        .container2>.content {
+            width: 80vw;
+            height: 60vh;
+            margin: 36px;
+        }
+
+        /* 검색 창 */
+        #search {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            margin-right: 10px;
+        }
+
+        .btn {
+            margin-right: 10px;
+        }
+
+        #action {
+            float: right;
+        }
+
+        #add {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        #save {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        #tablebox {
+            width: 940px;
+            margin: 0 auto;
+        }
+    </style>
+
 </head>
-<body>
-    <h2>소모품추가</h2>
+
+<body id="sign">
+    <div id="main">
+        <div id="menu1">
+            <img id="bluebell" alt="error" src="css/images/bluebell.PNG">
+            <div id="password">담당자</div>
+            <div class="brand"><span id="location">Admistraion</span><br>김은지</div>
+
+        </div>
+
+        <div id="menu2">
+
+
+        </div>
+        <div id="container">
+            <div id="submenu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="양말품목관리.html">
+                            <span>></span>
+                            양말품목관리
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="로그인.html">
+                            <span>></span>
+                            신청기간관리
+                        </a>
+                    </li>
+                    <hr class="sidebar-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="로그인.html">
+                            <span>></span>
+                            신청매장관리
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container2">
+                <!-- 메인 컨텐츠 -->
+                <div class="content">
+                    <!-- 제목 -->
+                    <h3>양말품목추가</h3>
+                    <!-- 검색 -->
+                    <div class="form-inline" id="search">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="save">저장</button>
+                        </div>
+                    </div>
+                    <table class="table table-bordered padding: 10px;">
+                        <tr>
+                            <td>상품코드</td>
+                            <td><input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required></td>
+                        </tr>
+                        <tr>
+                            <td>상품명</td>
+                            <td><input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required></td>
+                        </tr>
+                        <tr>
+                            <td>컬러</td>
+                            <td><input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required></td>
+                        </tr>
+                        <tr>
+                            <td>사이즈</td>
+                            <td><input type="text" class="form-control" size="10" required></td>
+                        </tr>
+                        <tr>
+                            <td>주문단위</td>
+                            <td><input type="text" class="form-control" size="10" required></td>
+                        </tr>
+                        <tr>
+                            <td>단가</td>
+                            <td><input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            ©Bluebell (Asia) Ltd. All Rights Reserved.
+        </div>
+    </div>
 </body>
+<style>
+</style>
+<style>
+    /* css 리셋 */
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        border: 1px black solid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        border: 1px black solid;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+</style>
+
 </html>
