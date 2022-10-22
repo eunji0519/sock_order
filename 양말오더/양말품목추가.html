@@ -146,9 +146,10 @@
 
         #sockadd {
             text-align: center;
+            margin-bottom: 0px;
         }
-        td, th {
-            vertical-align: middle;
+        #modalmargin {
+            margin: 20px;
         }
     </style>
 
@@ -200,7 +201,32 @@
                     <!-- 검색 -->
                     <div class="form-inline" id="search">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary" id="save">저장</button>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                저장
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">알림</h5>
+                                        </div>
+                                        <div class="modal-body text-center" id="modalmargin">
+                                            저장하시겠습니까?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">취소</button>
+                                            <button type="button" class="btn btn-primary" onClick="location.href='양말품목관리.html'">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal 끝 -->
                         </div>
                     </div>
                     <table class="table table-bordered" id="sockadd">
@@ -227,6 +253,7 @@
                             <td>
                                 <input type="text" class="form-control" size="10" required>
                             </td>
+                            <td colspan="3"></td>
                         </tr>
                         <tr>
                             <th class="align-middle">주문단위</th>
@@ -245,8 +272,10 @@
                             <td>
                                 <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
                             </td>
+                            <td colspan="3"></td>
                         </tr>
                     </table>
+
                 </div>
             </div>
         </div>
