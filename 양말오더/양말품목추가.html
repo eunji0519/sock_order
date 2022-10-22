@@ -144,9 +144,11 @@
             margin: 0 auto;
         }
 
-
-        td {
+        #sockadd {
             text-align: center;
+        }
+        td, th {
+            vertical-align: middle;
         }
     </style>
 
@@ -201,45 +203,45 @@
                             <button type="submit" class="btn btn-primary" id="save">저장</button>
                         </div>
                     </div>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" id="sockadd">
                         <tr>
-                            <th>상품코드</th>
-                            <td>
+                            <th class="align-middle">상품코드</th>
+                            <td colspan="4">
                                 <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
                             </td>
                         </tr>
                         <tr>
-                            <th>상품명</th>
-                            <th>
-                                <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>컬러</th>
-                            <th>
+                            <th class="align-middle">상품명</th>
+                            <th colspan="4">
                                 <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
                             </th>
                         </tr>
                         <tr>
-                            <th>사이즈</th>
+                            <th class="align-middle">컬러</th>
+                            <th colspan="4">
+                                <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="align-middle">사이즈</th>
                             <td>
                                 <input type="text" class="form-control" size="10" required>
                             </td>
                         </tr>
                         <tr>
-                            <th>주문단위</th>
-                            
-                            <th>두달 기준</th>
+                            <th class="align-middle">주문단위</th>
+
+                            <th class="align-middle">두달 기준</th>
                             <td>
                                 <input type="text" class="form-control" size="10" required>
                             </td>
-                            <th>항목 당</th>
+                            <th class="align-middle">항목 당</th>
                             <td>
                                 <input type="text" class="form-control" size="10" required>
                             </td>
                         </tr>
                         <tr>
-                            <th>단가</th>
+                            <th class="align-middle">단가</th>
                             <td>
                                 <input type="text" class="form-control" size="10" placeholder="내용을 입력하세요" required>
                             </td>
