@@ -21,28 +21,30 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-group">
-            <select class="form-control">
-                <option value="" disabled selected>Brand</option>
-                <option>fjlkasjflkjlaejlfjeajfjalkejrlejljl</option>
-            </select>
+    <form>
+        <div class="container">
+
+            <div class="form-group">
+                <select class="form-control" required>
+                    <option value="" disabled selected>Brand</option>
+                    <option>fjlkasjflkjlaejlfjeajfjalkejrlejljl</option>
+                </select>
+            </div>
+            <div class="form-group" required>
+                <select class="form-control" required>
+                    <option value="" disabled selected>Location</option>
+                    <option>fjlkasjflkjlaejlfjeajfjalkejrlejljl</option>
+                </select>
+            </div>
+            <div class="form-group" required>
+                <input type="password" class="form-control" required placeholder="비밀번호를 입력하세요">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-block"
+                    onClick="location.href='양말품목관리.html'">Login</button>
+            </div>
         </div>
-        <div class="form-group">
-            <select class="form-control">
-                <option value="" disabled selected>Location</option>
-                <option>fjlkasjflkjlaejlfjeajfjalkejrlejljl</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" required placeholder="비밀번호를 입력하세요">
-        </div>
-        <div>
-            <a href="양말품목관리.html" class="btn btn-primary btn-block">
-                Login
-            </a>
-        </div>
-    </div>
+    </form>
 </body>
 
 </html>
